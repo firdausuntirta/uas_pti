@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Raleway:wght@700&family=Roboto+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/img/favoicon.png" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        cursor: none;
+      }
+      .container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      .profile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+      .profile-picture {
+        position: relative;
+        margin-bottom: 20px;
+      }
+      .profile-picture img {
+        border-radius: 50%;
+        border: 5px solid #005c78;
+        width: 200px;
+        height: 200px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #333;
+        color: white;
+      }
+      .bg-customBlue {
+        background-color: #005c78;
+      }
+      .text-zinp {
+        color: #373a40;
+      }
+      .nav-link {
+        position: relative;
+        display: inline-block;
+        cursor: none;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #ffffff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-link:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+      .cursor-effect {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease-in-out;
+      }
+      a {
+        cursor: none;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }
+      .typing-effect::after {
+        content: "";
+        animation: blink 0.7s infinite;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .cool-font {
+        font-family: "Raleway", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-b from-blue-200 via-blue-300 to-blue-400 relative"
+  >
+    <div id="nav-placeholder"></div>
+
+    <div id="cursor-effect" class="cursor-effect"></div>
+
+    <section class="container mt-5 mx-auto px-6 py-10">
+      <!-- Start of Profile Content -->
+      <div class="profile-container">
+        <div class="profile-picture">
+          <img id="profile-pic" alt="Random Picture" />
+        </div>
+        <div class="text-center">
+          <h1 class="text-4xl font-bold">Hello World, I'm</h1>
+          <h2 class="text-4xl font-bold mt-2">Firdaus Satrio Utomo</h2>
+          <div class="h-6 mt-2">
+            <p class="cool-font" id="changing-text"></p>
+          </div>
+          <p class="text-md mt-2">Welcome to my personal website. 👋</p>
+        </div>
+      </div>
+      <h2 class="text-3xl font-bold mt-8 mb-8">Gallery</h2>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
+        >
+          <img
+            loading="lazy"
+            class="h-48 w-full object-cover"
+            sizes="(max-width: 300px) 200px,(max-width: 600px) 400px, 600px"
+            alt=""
+            src=" https://random.danielpetrica.com/api/random?format=full&1"
+          />
+          <div
+            class="absolute inset-0 bg-gray-800 bg-opacity-25 opacity-0 hover:opacity-100 transition duration-300"
+          >
+            <div class="flex items-center justify-center h-full"></div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
+        >
+          <img
+            loading="lazy"
+            class="h-48 w-full object-cover"
+            sizes="(max-width: 300px) 200px,(max-width: 600px) 400px, 600px"
+            alt=""
+            src=" https://random.danielpetrica.com/api/random?format=full&2"
+          />
+          <div
+            class="absolute inset-0 bg-gray-800 bg-opacity-25 opacity-0 hover:opacity-100 transition duration-300"
+          >
+            <div class="flex items-center justify-center h-full"></div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
+        >
+          <img
+            loading="lazy"
+            class="h-48 w-full object-cover"
+            sizes="(max-width: 300px) 200px,(max-width: 600px) 400px, 600px"
+            alt=""
+            src=" https://random.danielpetrica.com/api/random?format=full&3"
+          />
+          <div
+            class="absolute inset-0 bg-gray-800 bg-opacity-25 opacity-0 hover:opacity-100 transition duration-300"
+          >
+            <div class="flex items-center justify-center h-full"></div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
+        >
+          <img
+            loading="lazy"
+            class="h-48 w-full object-cover"
+            sizes="(max-width: 300px) 200px,(max-width: 600px) 400px, 600px"
+            alt=""
+            src=" https://random.danielpetrica.com/api/random?format=full&4"
+          />
+          <div
+            class="absolute inset-0 bg-gray-800 bg-opacity-25 opacity-0 hover:opacity-100 transition duration-300"
+          >
+            <div class="flex items-center justify-center h-full"></div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
+        >
+          <img
+            loading="lazy"
+            class="h-48 w-full object-cover"
+            sizes="(max-width: 300px) 200px,(max-width: 600px) 400px, 600px"
+            alt=""
+            src=" https://random.danielpetrica.com/api/random?format=full&5"
+          />
+          <div
+            class="absolute inset-0 bg-gray-800 bg-opacity-25 opacity-0 hover:opacity-100 transition duration-300"
+          >
+            <div class="flex items-center justify-center h-full"></div>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg shadow-lg transform transition duration-500 hover:scale-105"
+        >
+          <img
+            loading="lazy"
+            class="h-48 w-full object-cover"
+            sizes="(max-width: 300px) 200px,(max-width: 600px) 400px, 600px"
+            alt=""
+            src=" https://random.danielpetrica.com/api/random?format=full&6"
+          />
+          <div
+            class="absolute inset-0 bg-gray-800 bg-opacity-25 opacity-0 hover:opacity-100 transition duration-300"
+          >
+            <div class="flex items-center justify-center h-full"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-4 text-white bg-customBlue">
+      © 2024 <strong>FIRDAUS SATRIO UTOMO</strong>.
+    </footer>
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        const cursor = document.getElementById("cursor-effect");
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+        if (e.target.classList.contains("nav-link")) {
+          cursor.style.transform = "scale(1.5)";
+        } else {
+          cursor.style.transform = "scale(1)";
+        }
+        if (
+          e.target.classList.contains("text-gray-200") ||
+          e.target.tagName === "img" ||
+          e.target.tagName === "IMG"
+        ) {
+          cursor.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+          cursor.style.opacity = "0.8";
+        } else {
+          cursor.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+          cursor.style.opacity = "1";
+        }
+      });
+
+      function loadNav() {
+        fetch("nav.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("nav-placeholder").innerHTML = data;
+            document
+              .getElementById("menu-button")
+              .addEventListener("click", function () {
+                const menu = document.getElementById("menu");
+                menu.classList.toggle("hidden");
+              });
+          });
+      }
+      loadNav();
+
+      // Set profile picture with dynamic URL
+      const profilePicElement = document.getElementById("profile-pic");
+      const profilePicUrl = `https://api.dicebear.com/9.x/bottts-neutral/svg`;
+      profilePicElement.src = profilePicUrl;
+
+      const roles = ["Mahasiswa", "Universitas", "Sultan Ageng Tirtayasa"];
+      let roleIndex = 0;
+      let charIndex = 0;
+      const typingSpeed = 150;
+      const erasingSpeed = 100;
+      const newTextDelay = 2000;
+      const typedTextElement = document.getElementById("changing-text");
+
+      function type() {
+        if (charIndex < roles[roleIndex].length) {
+          typedTextElement.textContent += roles[roleIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingSpeed);
+        } else {
+          setTimeout(erase, newTextDelay);
+        }
+      }
+
+      function erase() {
+        if (charIndex > 0) {
+          typedTextElement.textContent = roles[roleIndex].substring(
+            0,
+            charIndex - 1
+          );
+          charIndex--;
+          setTimeout(erase, erasingSpeed);
+        } else {
+          roleIndex++;
+          if (roleIndex >= roles.length) roleIndex = 0;
+          setTimeout(type, typingSpeed);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        if (roles.length) setTimeout(type, newTextDelay + 250);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/img/favoicon.png" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        /* overflow: hidden; */
+        cursor: none;
+      }
+      .bg-customBlue {
+        background-color: #005c78;
+      }
+      .text-zinp {
+        color: #373a40;
+      }
+      .nav-link {
+        position: relative;
+        display: inline-block;
+        cursor: none;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #ffffff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-link:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+      .cursor-effect {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease-in-out;
+      }
+      a {
+        cursor: none;
+      }
+      .project-coming-soon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        opacity: 1; /* Make it visible by default */
+        transition: opacity 0.3s ease-in-out;
+      }
+      .project-container .project-coming-soon {
+        opacity: 1;
+      }
+      .project-container:hover .project-coming-soon {
+        opacity: 1; /* Keep it visible on hover as well */
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-b from-blue-200 via-blue-300 to-blue-400 relative"
+  >
+    <div id="nav-placeholder"></div>
+
+    <section class="container mx-auto px-6 py-10">
+      <article
+        class="max-w-4xl mx-auto p-6 bg-customBlue rounded-lg shadow-xl text-white"
+        data-page="resume"
+      >
+        <header class="mb-8">
+          <h2 class="text-2xl font-bold text-blue-200">Resume</h2>
+        </header>
+
+        <section class="mb-8">
+          <div class="flex items-center mb-4 mr-7">
+            <div class="text-blue-500 mr-2">
+              <ion-icon name="book-outline" size="large"></ion-icon>
+            </div>
+            <h3 class="text-xl font-semibold">Pendidikan</h3>
+          </div>
+
+          <ol class="relative border-l border-gray-700 ml-4">
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-blue-200 rounded-full -left-4 ring-4 ring-gray-800"
+              >
+                <ion-icon
+                  name="school-outline"
+                  size="small"
+                  class="text-gray-800"
+                ></ion-icon>
+              </span>
+              <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold text-gray-200">
+                  SD Negeri Periuk 6 Kota Tangerang
+                </h4>
+                <span class="block text-gray-500">2011 — 2017</span>
+              </div>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-blue-200 rounded-full -left-4 ring-4 ring-gray-800"
+              >
+                <ion-icon
+                  name="school-outline"
+                  size="small"
+                  class="text-gray-800"
+                ></ion-icon>
+              </span>
+              <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold text-gray-200">
+                  SMP Negeri 2 Kota Tangerang
+                </h4>
+                <span class="block text-gray-500">2017 — 2020</span>
+              </div>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-blue-200 rounded-full -left-4 ring-4 ring-gray-800"
+              >
+                <ion-icon
+                  name="school-outline"
+                  size="small"
+                  class="text-gray-800"
+                ></ion-icon>
+              </span>
+              <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold text-gray-200">
+                  SMKN 4 Kota Tangerang
+                </h4>
+                <span class="block text-gray-500">2020 — 2023</span>
+                <p class="text-gray-400">Rekayasa Perangkat Lunak.</p>
+              </div>
+            </li>
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-blue-200 rounded-full -left-4 ring-4 ring-gray-800"
+              >
+                <ion-icon
+                  name="school-outline"
+                  size="small"
+                  class="text-gray-800"
+                ></ion-icon>
+              </span>
+              <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold text-gray-200">
+                  Universitas Sultan Ageng Tirtayasa
+                </h4>
+                <span class="block text-gray-500">2023 — Sekarang</span>
+                <p class="text-gray-400">Informatika.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="mb-8">
+          <div class="flex items-center mb-4">
+            <div class="text-blue-500 mr-2">
+              <ion-icon name="briefcase-outline" size="large"></ion-icon>
+            </div>
+            <h3 class="text-xl font-semibold">Pengalaman</h3>
+          </div>
+
+          <ol class="relative border-l border-gray-700 ml-4">
+            <li class="mb-10 ml-6">
+              <span
+                class="absolute flex items-center justify-center w-8 h-8 bg-blue-300 rounded-full -left-4 ring-4 ring-gray-800"
+              >
+                <ion-icon name="briefcase-outline" size="small"></ion-icon>
+              </span>
+              <div class="p-4 bg-gray-800 rounded-lg shadow-lg">
+                <h4 class="text-lg font-semibold text-gray-200">
+                  Praktek Kerja Lapangan
+                </h4>
+                <span class="block text-gray-500"
+                  >Januari 2022 — Maret 2022</span
+                >
+                <p class="text-gray-400">Kantor Kecamatan Pasar Kemis.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="mb-8">
+          <h3 class="text-xl font-semibold mb-4">Bahasa yang Dikuasai</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 flex items-center">
+              <ion-icon
+                name="logo-html5"
+                class="text-red-500 mr-4"
+                size="large"
+              ></ion-icon>
+              <h5 class="font-medium text-gray-200">HTML5</h5>
+            </div>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 flex items-center">
+              <img
+                src="assets/img/java.png"
+                alt="JAVA Logo"
+                class="w-10 h-10 mr-4"
+              />
+              <h5 class="font-medium text-gray-200">JAVA</h5>
+            </div>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 flex items-center">
+              <img
+                src="assets/img/cplus.png"
+                alt="C++ Logo"
+                class="w-10 h-10 mr-4"
+              />
+              <h5 class="font-medium text-gray-200">C++</h5>
+            </div>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 flex items-center">
+              <img
+                src="assets/img/php.png"
+                alt="PHP Logo"
+                class="w-10 h-10 mr-4"
+              />
+              <h5 class="font-medium text-gray-200">PHP</h5>
+            </div>
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 flex items-center">
+              <ion-icon
+                name="logo-python"
+                class="text-green-500 mr-4"
+                size="large"
+              ></ion-icon>
+              <h5 class="font-medium text-gray-200">Python</h5>
+            </div>
+          </div>
+        </section>
+      </article>
+    </section>
+
+    <div class="cursor-effect" id="cursor-effect"></div>
+    <footer class="text-center py-4 text-white bg-customBlue">
+      © 2024 <strong>FIRDAUS SATRIO UTOMO</strong>.
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        const cursor = document.getElementById("cursor-effect");
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+        if (e.target.classList.contains("nav-link")) {
+          cursor.style.transform = "scale(1.5)";
+        } else {
+          cursor.style.transform = "scale(1)";
+        }
+        if (
+          e.target.classList.contains("text-gray-200") ||
+          e.target.classList.contains("bg-white") ||
+          e.target.tagName === "IMG"
+        ) {
+          cursor.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+          cursor.style.opacity = "0.8";
+        } else {
+          cursor.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+          cursor.style.opacity = "1";
+        }
+      });
+
+      // Function to load external HTML into the placeholder
+      function loadNav() {
+        fetch("nav.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("nav-placeholder").innerHTML = data;
+            // Add event listener to the menu button after nav is loaded
+            document
+              .getElementById("menu-button")
+              .addEventListener("click", function () {
+                const menu = document.getElementById("menu");
+                menu.classList.toggle("hidden");
+              });
+          });
+      }
+
+      // Load the navigation bar
+      loadNav();
+    </script>
+  </body>
+</html>

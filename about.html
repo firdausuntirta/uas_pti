@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Saya</title>
+    <link rel="icon" type="image/png" href="assets/img/favoicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        cursor: none;
+        background-color: #005c78;
+      }
+      .bg-customBlue {
+        background-color: #005c78;
+      }
+      .text-primary {
+        color: #005c78;
+      }
+      .nav-link {
+        position: relative;
+        display: inline-block;
+        cursor: none;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #ffffff;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-link:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+      }
+      .cursor-effect {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease-in-out;
+      }
+      a {
+        cursor: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-b from-blue-200 via-blue-300 to-blue-400 relative"
+  >
+    <div id="nav-placeholder"></div>
+
+    <section class="container mx-auto px-6 py-10">
+      <div class="flex flex-col md:flex-row items-center md:items-start">
+        <div class="w-full md:w-1/3 mb-8 md:mb-0">
+          <img
+            src="assets/img/pasfoto.png"
+            alt="Foto Saya"
+            class="rounded-full mx-auto shadow-lg w-2/3 md:w-full"
+          />
+        </div>
+        <div class="w-full md:w-2/3 md:pl-10">
+          <h2 class="text-3xl font-bold text-center md:text-left text-primary">
+            Tentang Saya
+          </h2>
+          <p class="md:text-left mt-4 text-justify text-gray-700">
+            Halo! Saya Firdaus Satrio Utomo, seorang mahasiswa semester 2 di
+            Universitas Sultan Ageng Tirtayasa. Saya berasal dari Jurusan
+            Informatika. Saya memiliki minat yang besar dalam dunia IT, terutama
+            dalam bidang Website dan Android.
+          </p>
+
+          <div class="mt-8">
+            <h3 class="text-2xl font-bold text-primary">
+              Bidang Yang Saya Minati
+            </h3>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 text-gray-700"
+            >
+              <div
+                class="flex items-center p-6 border border-blue-300 rounded-lg shadow-xl bg-blue-200"
+              >
+                <div class="mr-4">
+                  <img
+                    src="assets/img/websiite.png"
+                    width="50"
+                    height="50"
+                    alt="websiite"
+                    class="w-12 h-12"
+                  />
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold">Website</h4>
+                  <p class="mt-1 text-sm">
+                    Saya tertarik dalam Pengembangan Website.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center p-6 border border-blue-300 rounded-lg shadow-xl bg-blue-200"
+              >
+                <div class="mr-4">
+                  <img
+                    src="assets/img/android.png"
+                    width="50"
+                    height="50"
+                    alt="android"
+                    class="w-12 h-12"
+                  />
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold">Aplikasi Android</h4>
+                  <p class="mt-1 text-sm">
+                    Saya tertarik dalam Pengembangan Aplikasi Android.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center p-6 border border-blue-300 rounded-lg shadow-xl bg-blue-200 col-span-1 sm:col-span-2"
+              >
+                <div class="mr-4">
+                  <img
+                    src="assets/img/tech.png"
+                    width="50"
+                    height="50"
+                    alt="tech"
+                    class="w-12 h-12"
+                  />
+                </div>
+                <div>
+                  <h4 class="text-xl font-semibold">Semua Tentang Teknologi</h4>
+                  <p class="mt-1 text-sm">
+                    Saya tertarik dalam semua hal yang berhubungan dengan
+                    Teknologi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cursor-effect" id="cursor-effect"></div>
+    <footer class="text-center py-4 text-white bg-customBlue">
+      © 2024 <strong>FIRDAUS SATRIO UTOMO</strong>.
+    </footer>
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        const cursor = document.getElementById("cursor-effect");
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+        if (e.target.classList.contains("nav-link")) {
+          cursor.style.transform = "scale(1.5)";
+        } else {
+          cursor.style.transform = "scale(1)";
+        }
+        if (
+          e.target.classList.contains("text-gray-200") ||
+          e.target.classList.contains("bg-white")
+        ) {
+          cursor.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+          cursor.style.opacity = "0.8";
+        } else {
+          cursor.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+          cursor.style.opacity = "1";
+        }
+      });
+
+      // Function to load external HTML into the placeholder
+      function loadNav() {
+        fetch("nav.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("nav-placeholder").innerHTML = data;
+            // Add event listener to the menu button after nav is loaded
+            document
+              .getElementById("menu-button")
+              .addEventListener("click", function () {
+                const menu = document.getElementById("menu");
+                menu.classList.toggle("hidden");
+              });
+          });
+      }
+
+      // Load the navigation bar
+      loadNav();
+    </script>
+  </body>
+</html>
