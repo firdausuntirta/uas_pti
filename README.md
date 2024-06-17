@@ -2,7 +2,6 @@
 
 Selamat datang di website portofolio Firdaus Satrio Utomo! Website ini menampilkan perjalanan profesional, keterampilan, dan proyek-proyek saya. Jelajahi berbagai bagian untuk mengetahui lebih lanjut tentang saya.
 
-![Portfolio](https://via.placeholder.com/1200x400?text=Firdaus+Satrio+Utomo+Portfolio)
 
 ## 📋 Daftar Isi
 
