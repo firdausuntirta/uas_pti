@@ -302,10 +302,20 @@
           });
       }
       loadNav();
-
+      function getRandomText(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            const charactersLength = characters.length;
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+      }
       // Set profile picture with dynamic URL
       const profilePicElement = document.getElementById("profile-pic");
-      const profilePicUrl = `https://api.dicebear.com/9.x/bottts-neutral/svg`;
+      const randText = getRandomText(5);
+      // const profilePicUrl = `https://api.dicebear.com/9.x/bottts-neutral/svg`;
+      const profilePicUrl = `https://api.dicebear.com/9.x/fun-emoji/svg?seed=${randText}`;
       profilePicElement.src = profilePicUrl;
 
       const roles = ["Mahasiswa", "Universitas", "Sultan Ageng Tirtayasa"];
