@@ -29,6 +29,7 @@
       }
       .bg-customBlue {
         background-color: #005c78;
+        cursor: none;
       }
       .text-zinp {
         color: #373a40;
@@ -77,6 +78,30 @@
       .form-input:focus {
         border-color: #005c78;
         box-shadow: 0 0 0 1px #005c78;
+      }
+
+      .link-container {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60px;
+      }
+
+      .link-container ion-icon {
+        margin-right: 10px;
+      }
+
+      .link-container h5 {
+        margin: 0;
+      }
+
+      @media (min-width: 768px) {
+        .link-container {
+          width: 200px;
+        }
       }
     </style>
   </head>
@@ -135,21 +160,21 @@
           <div class="text-center">
             <button
               type="submit"
-              class="bg-customBlue text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+              class="bg-customBlue text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-300 transform hover:scale-105"
             >
               Send
             </button>
           </div>
         </form>
-        <div class="flex flex-wrap justify-center space-x-0 sm:space-x-4 mt-8">
+        <div class="flex flex-wrap justify-center mt-8">
           <a
             href="https://wa.me/6281212571925"
             target="_blank"
-            class="bg-customBlue rounded-lg shadow-lg p-4 flex items-center justify-center m-2 hover:bg-blue-700 transition duration-300 w-40 h-16"
+            class="bg-customBlue rounded-lg shadow-lg p-4 link-container hover:bg-blue-500 transition duration-300 transform hover:scale-105"
           >
             <ion-icon
               name="logo-whatsapp"
-              class="text-blue-200 mr-4"
+              class="text-blue-200"
               size="large"
             ></ion-icon>
             <h5 class="font-medium text-gray-200">Whatsapp</h5>
@@ -157,11 +182,11 @@
           <a
             href="https://www.linkedin.com/in/firdaus-satrio-utomo-1b618830b/"
             target="_blank"
-            class="bg-customBlue rounded-lg shadow-lg p-4 flex items-center justify-center m-2 hover:bg-blue-700 transition duration-300 w-40 h-16"
+            class="bg-customBlue rounded-lg shadow-lg p-4 link-container hover:bg-blue-500 transition duration-300 transform hover:scale-105"
           >
             <ion-icon
               name="logo-linkedin"
-              class="text-blue-200 mr-4"
+              class="text-blue-200"
               size="large"
             ></ion-icon>
             <h5 class="font-medium text-gray-200">LinkedIn</h5>
@@ -169,22 +194,22 @@
           <a
             href="https://www.instagram.com/firdaussaut"
             target="_blank"
-            class="bg-customBlue rounded-lg shadow-lg p-4 flex items-center justify-center m-2 hover:bg-blue-700 transition duration-300 w-40 h-16"
+            class="bg-customBlue rounded-lg shadow-lg p-4 link-container hover:bg-blue-500 transition duration-300 transform hover:scale-105"
           >
             <ion-icon
               name="logo-instagram"
-              class="text-blue-200 mr-4"
+              class="text-blue-200"
               size="large"
             ></ion-icon>
             <h5 class="font-medium text-gray-200">Instagram</h5>
           </a>
           <a
             href="mailto:3337230039@untirta.ac.id"
-            class="bg-customBlue rounded-lg shadow-lg p-4 flex items-center justify-center m-2 hover:bg-blue-700 transition duration-300 w-40 h-16"
+            class="bg-customBlue rounded-lg shadow-lg p-4 link-container hover:bg-blue-500 transition duration-300 transform hover:scale-105"
           >
             <ion-icon
               name="mail-outline"
-              class="text-blue-200 mr-4"
+              class="text-blue-200"
               size="large"
             ></ion-icon>
             <h5 class="font-medium text-gray-200">Email</h5>
